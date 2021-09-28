@@ -6,7 +6,7 @@ class CardsView extends React.Component {
     const { cards } = this.props;
 
     return (
-      <div className='cards'>
+      <div className="cards">
         { cards.map((card, idx) => <ShopCard card={card} key={idx} />) }
       </div>
     );

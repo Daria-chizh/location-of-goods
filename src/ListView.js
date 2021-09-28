@@ -6,7 +6,7 @@ class ListView extends React.Component {
     const { items } = this.props;
 
     return (
-      <table className='list'>
+      <table className="list">
         <tbody>
           { items.map((item, idx) => <ShopItem item={item} key={idx} />) }
         </tbody>
