@@ -5,7 +5,7 @@ class IconSwitch extends React.Component {
     const { icon, onSwitch } = this.props;
 
     return (
-      <span className="material-icons switchIcon" onClick={() => onSwitch()}>{icon}</span>
+      <span className="material-icons switch-icon" onClick={() => onSwitch()}>{icon}</span>
     );
   }
 }
