@@ -1,5 +1,6 @@
 import React from 'react';
 import ShopItem from './ShopItem';
+import PropTypes from 'prop-types';
 
 class ListView extends React.Component {
   render() {
@@ -14,5 +15,16 @@ class ListView extends React.Component {
     );
   }
 }
-export default ListView;
 
+ListView.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      img: PropTypes.string,
+      name: PropTypes.string,
+      color: PropTypes.string,
+      price: PropTypes.string,
+    }),
+  ).isRequired,
+};
+
+export default ListView;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class IconSwitch extends React.Component {
   render() {
@@ -9,5 +10,10 @@ class IconSwitch extends React.Component {
     );
   }
 }
-export default IconSwitch;
 
+IconSwitch.propTypes = {
+  icon: PropTypes.string.isRequired,
+  onSwitch: PropTypes.func.isRequired,
+};
+
+export default IconSwitch;

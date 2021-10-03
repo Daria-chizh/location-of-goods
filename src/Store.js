@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import CardsView from './CardsView';
 import ListView from './ListView';
 import IconSwitch from './IconSwitch';
@@ -29,4 +31,16 @@ class Store extends React.Component {
     )
   }
 }
+
+Store.propTypes = {
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      img: PropTypes.string,
+      name: PropTypes.string,
+      color: PropTypes.string,
+      price: PropTypes.string,
+    }),
+  ).isRequired,
+};
+
 export default Store;

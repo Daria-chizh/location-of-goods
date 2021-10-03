@@ -1,5 +1,6 @@
 import React from 'react';
 import ShopCard from './ShopCard';
+import PropTypes from 'prop-types';
 
 class CardsView extends React.Component {
   render() {
@@ -12,5 +13,16 @@ class CardsView extends React.Component {
     );
   }
 }
-export default CardsView;
 
+CardsView.propTypes = {
+  cards: PropTypes.arrayOf(
+    PropTypes.shape({
+      img: PropTypes.string,
+      name: PropTypes.string,
+      color: PropTypes.string,
+      price: PropTypes.string,
+    }),
+  ).isRequired,
+};
+
+export default CardsView;
